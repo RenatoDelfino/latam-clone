@@ -1,0 +1,330 @@
+@tailwind utilities;
+
+@layer utilities {
+  .card-container {
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+    border: 1px solid rgb(225, 225, 225);
+  }
+
+  .content-main {
+    grid-column: 3 / span 8;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .summary-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(16, 0, 79);
+    font-weight: 400;
+  }
+
+  .heading-text {
+    font-size: 1.5em;
+  }
+
+  .total-amount {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .amount {
+    font-size: 1.5em;
+    color: rgb(16, 0, 79);
+    font-weight: 600;
+  }
+
+  .passenger-info {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #666;
+  }
+
+  .divider {
+    margin: 16px 0;
+    border: 0;
+    border-top: 1px solid #eaeaea;
+  }
+
+  .details-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0px;
+  }
+
+  .details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    list-style: none;
+    margin-left: -0.75rem;
+  }
+
+  .details-item {
+    margin-bottom: 16px;
+    list-style: none;
+    margin: 0.5rem 0.75rem;
+  }
+
+  .flight-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flight-route,
+  .flight-date,
+  .flight-time {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(48, 48, 48);
+    font-weight: 400;
+  }
+
+  .flight-route {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(16, 0, 79);
+    font-weight: 600;
+  }
+
+  .action-section {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .action-button {
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    /* font-family: "LATAM Sans", "Trebuchet MS", sans-serif; */
+    font-weight: 600;
+    gap: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    color: rgb(205, 16, 67);
+    font-size: 1rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+  }
+
+  .button-text {
+    font-size: 1em;
+  }
+
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(48, 48, 48, 0.1) 0px 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .payment-card {
+    display: flex;
+    align-items: center;
+    padding: 16px !important;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .payment-card:hover {
+    background-color: rgb(238, 237, 249);
+  }
+
+  .payment-card .icon {
+    margin-right: 16px;
+    font-size: 24px;
+  }
+
+  .payment-card .icon i {
+    -webkit-box-align: center;
+    align-items: center;
+    color: #303030;
+    display: inline-flex;
+    height: unset;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 24px;
+  }
+
+  .payment-card .payment-info {
+    flex-grow: 1;
+  }
+
+  .payment-card .title {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.013rem;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(92, 92, 92);
+    font-weight: 600;
+    color: rgb(16, 0, 79);
+  }
+
+  .payment-card .description {
+    margin-top: 0.25rem;
+    color: #5c5c5c;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .payment-card .toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    --radio-size: 1.5rem;
+    --checked-size: 0.875rem;
+    --hover-highlight-size: calc((2.25rem - var(--radio-size)) / 2);
+    border-radius: 50%;
+    border: 2px solid #4658df;
+    cursor: pointer;
+    display: inline-flex;
+    height: var(--radio-size);
+    position: relative;
+    width: var(--radio-size);
+    flex-shrink: 0;
+  }
+
+  input[type="radio"]:after {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid rgb(68, 131, 247);
+    box-shadow: inset 0 0 0 5px white;
+  }
+
+  input[type="radio"]:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(68, 131, 247);
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid rgb(68, 131, 247);
+  }
+
+  .emailform {
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-area: overlap-start / content-start / content-end / overlap-end;
+    padding: 1rem;
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+    border: 1px solid rgb(225, 225, 225);
+  }
+
+  .emailform h1 {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(16, 0, 79);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.013rem;
+    font-weight: 400;
+  }
+
+  .terms label {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(92, 92, 92);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.013rem;
+  }
+
+  .terms strong {
+    --color: #4658df;
+    --font-height: 1.5;
+    --font-size: 1rem;
+    --font-weight: 600;
+    --outline-color: #1b0088;
+    --visited-color: #6617a3;
+    --underline-color: var(--color);
+    box-sizing: content-box;
+    color: var(--color);
+    display: inline-flex;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    gap: 0.25rem;
+    line-height: var(--font-height);
+    text-decoration: underline var(--underline-color) 0.063rem;
+    text-underline-offset: 2px;
+    margin-left: 4px;
+  }
+
+  .terms strong i {
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(45, 52, 206);
+    display: inline-flex;
+    height: unset;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 16px;
+  }
+
+  .finallybtn {
+    grid-column: 8 / span 3;
+    background-color: rgb(232, 17, 75);
+    border: 0.0625rem solid rgb(232, 17, 75);
+    color: rgb(255, 255, 255);
+  }
+}

@@ -1,0 +1,94 @@
+@tailwind utilities;
+
+@layer utilities {
+  .skeleton {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ebebeb;
+    border-radius: 4px;
+  }
+
+  .terms {
+    max-width: 940px;
+    margin: 0px auto;
+  }
+
+  .terms li {
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: circle !important;
+    opacity: 0.9;
+  }
+
+  .terms li p {
+    font-weight: 500;
+  }
+
+  .terms h2 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: rgb(48, 48, 48);
+  }
+
+  .terms li::marker {
+    color: rgb(27, 0, 136);
+  }
+
+  .itens-como {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    fill: rgb(27, 0, 136);
+  }
+
+  .como-container h2 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: rgb(48, 48, 48);
+  }
+
+  .itens-como svg {
+    fill: rgb(27, 0, 136);
+    color: rgb(27, 0, 136);
+    min-height: 20px;
+    min-width: 20px;
+    margin-right: 10px;
+    border: 1px solid rgb(27, 0, 136);
+    padding: 3px;
+    border-radius: 50%;
+  }
+
+  .itens-como i {
+    color: rgb(27, 0, 136);
+    width: 65%;
+    -webkit-box-align: center;
+    align-items: center;
+    color: inherit;
+    display: inline-flex;
+    height: unset;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 24px;
+  }
+
+  .itens-como div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    list-style: none;
+    padding-bottom: 16px;
+  }
+
+  .itens-como div p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

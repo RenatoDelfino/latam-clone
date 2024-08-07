@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./index.css";
+@import "./datapicker.css";
+@import "./pricingpage.css";
+@import "./checkout.css";
+@import "./payment.css";
+@import "./skeleton.css";
+
+@layer utilities {
+  .center-col {
+    @apply flex flex-col justify-center items-center;
+  }
+  .center {
+    @apply flex justify-center items-center;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+    padding-left: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 3px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c4c4c4c2;
+    width: 3px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .detail {
+    background-color: transparent;
+    border-bottom-left-radius: 0.5rem;
+    box-shadow: #ffffff -0.5rem 0 0 0;
+    content: "";
+    height: 0.5rem;
+    left: 100%;
+    position: absolute;
+    top: calc(100% - 1.3rem);
+    width: 1.25rem;
+  }
+  .app-text {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    min-width: initial;
+    padding: 0px 0px 0px 0.5rem;
+    text-overflow: initial;
+    overflow: initial;
+    white-space: initial;
+  }
+  .app-link {
+    box-sizing: content-box;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 0.875rem;
+    font-weight: 600;
+    gap: 0.25rem;
+    line-height: 1.5;
+    text-decoration: none;
+    text-underline-offset: 2px;
+  }
+  .svg-link {
+    -webkit-box-align: center;
+    align-items: center;
+    color: inherit;
+    display: inline-flex;
+    height: unset;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 16px;
+  }
+  .br-svg {
+    -webkit-box-align: center;
+    align-items: center;
+    color: inherit;
+    display: inline-flex;
+    height: unset;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 24px;
+  }
+  .dropdown-avatar {
+    border-radius: 50%;
+    display: inline-flex;
+    font-weight: 400;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    padding: 0.125rem;
+    background-color: #10004f;
+    border: 0.125rem solid #e8114b;
+  }
+  .button-nav {
+    background: 0 0;
+    border: 0.0625rem solid #fff;
+    border-radius: 1000px;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0 0.75rem 0 0;
+    position: relative;
+    width: initial;
+  }
+  .button-nav_text {
+    color: #fff;
+    font-weight: 600;
+    max-width: 6rem;
+    min-width: initial;
+    padding: 0 0 0 0.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .hero-bg {
+    padding: 5rem 0px 11rem;
+    background-image: linear-gradient(
+        rgba(16, 0, 79, 0.5) 0%,
+        rgba(16, 0, 79, 0.1) 50%
+      ),
+      url(https://viagem-ferias-julho.com/storage/images/upload/inspiracional-sur.png);
+    background-size: cover;
+    background-position: center center;
+    max-width: 85rem;
+    object-fit: cover;
+    height: 510px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .shadow-field {
+    border-color: rgb(27, 0, 136);
+    border-width: 2px;
+    box-shadow: rgba(16, 0, 79, 0.3) 0px 0px 8px;
+  }
+  .data-field {
+    border: 0;
+    border-radius: 0 8px 8px 0;
+    box-sizing: border-box;
+    color: #303030;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    font-size: 1.125rem;
+    font-weight: 400;
+    height: 100%;
+    outline: 0;
+    padding-left: 12px;
+    top: -18px;
+    width: unset;
+    max-width: 180px;
+  }
+  .button-form {
+    height: 55px;
+    background-color: rgb(232, 17, 75);
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    width: 176px;
+    padding: 1rem;
+    /* font-family: "Latam Sans", sans-serif; */
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: rgb(232, 17, 75) 0px 0px 0px 2px inset;
+    border-radius: 8px;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: ;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
